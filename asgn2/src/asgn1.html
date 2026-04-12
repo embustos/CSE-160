@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <title> CSE 160: Assignment 1</title>
+</head>
+
+<body onload="main()">
+   <canvas id="asg1" width="400" height="400" style="border:1px solid #000000;">
+      Please use a browser that supports "canvas"
+   </canvas>
+
+   <br><br>
+   <button type="button" id="clear">Clear Canvas</button>
+   <br><br>
+   <label>Drawing Mode:</label>
+   <br><br>
+   <button type="button" id="square">Squares</button>
+   <button type="button" id="triangle">Triangles</button>
+   <button type="button" id="circle">Circles</button>
+   <br><br>
+   <label>Spray Paint Mode:</label>
+   <button type="button" id="spray-sq">Spray Squares</button>
+   <button type="button" id="spray-tri">Spray Triangles</button>
+   <button type="button" id="spray-circ">Spray Circles</button>
+   <br><br>
+   <label>Shape Color:</label>
+   <br>
+   <label>Red</label>
+   <input type="range" id="red" name="red" min="0" max="10" class="slider">
+   <label>Green</label>
+   <input type="range" id="green" name="green" min="0" max="10" class="slider">
+   <label>Blue</label>
+   <input type="range" id="blue" name="blue" min="0" max="10" class="slider">
+   <br><br>
+   <label>Shape Size: </label>
+   <input type="range" id="size" name="size" min="1" max="10" class="slider">
+   <label>(Circles) Segment Count: </label>
+   <input type="range" id="sCount" name="sCount" min="12" max="24" step="1" value="20" class="slider">
+   <br><br>
+   <p>Note:<br>Spray Paint Mode scatters your selected shape randomly around the cursor; use the Size slider to control the spray radius. Like in real life spray paint splashes some paint around the main focus point so that effect was added to the mode.</p>
+
+   <hr>
+   <h3>My Picture</h3>
+   <p>Soccer ball with initials EB, built with more than 20 triangles.</p>
+   <button type="button" id="picture">Draw Picture</button>
+   <br><br>
+   <img src="triangle_image.jpeg" alt="Soccer Ball Sketch" width="300" height="300">
+
+   <script src="../lib/webgl-utils.js"></script>
+   <script src="../lib/webgl-debug.js"></script>
+   <script src="../lib/cuon-utils.js"></script>
+   <script src="../lib/cuon-matrix.js"></script>
+
+   <script type=text/javascript src="Triangle.js"></script>
+   <script type=text/javascript src="Point.js"></script>
+   <script type=text/javascript src="Circle.js"></script>
+   <script type=text/javascript src="SoccerBall.js"></script>
+   <script type=text/javascript src="asgn1.js"></script>
+
+</body>
+</html>
