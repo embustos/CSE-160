@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>CSE160: ASGN2</title>
+    <style>
+        body { background-color: #1a1a1a; color: white; font-family: Arial, sans-serif; }
+        canvas { border: 1px solid #555; display: block; }
+        .controls { margin-top: 10px; }
+        label { display: inline-block; width: 180px; }
+    </style>
+</head>
+
+<body onload="main()">
+    <canvas id="asg2" width="700" height="700">
+        Please use a browser that supports "canvas"
+    </canvas>
+
+    <div class="controls">
+        <label>Camera Angle (drag or slide):</label>
+        <input type="range" id="camera" min="0" max="360" value="0"><br><br>
+
+        <b>Joint controls (same leg chain: upper → lower → paw)</b><br>
+        <label>Upper Leg Joint:</label>
+        <input type="range" id="joint1" min="-30" max="30" value="0"><br>
+
+        <label>Lower Leg Joint:</label>
+        <input type="range" id="joint2" min="0"   max="30" value="0"><br>
+
+        <label>Paw Bend (3rd joint):</label>
+        <input type="range" id="joint3" min="0"   max="25" value="0"><br><br>
+
+        <label>Tail Wag:</label>
+        <input type="range" id="tail"   min="-30" max="30" value="0"><br><br>
+
+        <label>Basic Animation:</label>
+        <button id="animate_on">ON</button>
+        <button id="animate_off">OFF</button><br><br>
+
+        <p>Poke Animation (shift-click canvas)</p>
+
+        <p id="perf">FPS: --</p>
+
+        <p>Name: Emiliano Bustos</p>
+        <p>Student Email: ebustos@ucsc.edu</p>
+        <p>Assigned Animal: Fox</p>
+    </div>
+
+    <!-- Library files -->
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+
+    <!-- Source files -->
+    <script src="../src/Triangle.js"></script>
+    <script src="../src/Cube.js"></script>
+    <script src="../src/Cylinder.js"></script>
+    <script src="../src/Cone.js"></script>
+    <script src="../src/asgn2.js"></script>
+    <script src="../src/drawAllShapes.js"></script>
+</body>
+</html>
