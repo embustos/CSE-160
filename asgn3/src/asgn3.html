@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <title>ASGN3: Virtual World</title>
+   <link rel="shortcut icon" href="">
+</head>
+<body onload="main()">
+   <canvas id="asg3" width="400" height="400" style="border:1px solid #000000;">
+      Please use a browser that supports "canvas"
+   </canvas>
+   <br><br>
+   <p>
+      <b>Controls:</b> WASD = move &nbsp;|&nbsp; Q/E = turn camera &nbsp;|&nbsp; Mouse = look<br>
+      <b>F</b> = place a block in front &nbsp;|&nbsp; <b>R</b> = remove a block in front
+   </p>
+   <p><b>The Lost Garden</b>: Three sacred gems were scattered when the outpost fell.
+      Wander the courtyard to recover them all.</p>
+   <p id="story"></p>
+   <button id="restart" type="button"
+           style="display:none; margin-top:4px; padding:6px 14px; font-size:14px;
+                  cursor:pointer; border:1px solid #555; background:#f0e0a0;">
+      ▶ Play Again
+   </button>
+
+   <p>Name: Emiliano Bustos</p>
+   <p>School Email: ebustos@ucsc.edu</p>
+
+   <script src="../lib/webgl-utils.js"></script>
+   <script src="../lib/webgl-debug.js"></script>
+   <script src="../lib/cuon-utils.js"></script>
+   <script src="../lib/cuon-matrix-cse160.js"></script>
+
+   <script type="text/javascript" src="../src/Triangle.js"></script>
+   <script type="text/javascript" src="../src/Cube.js"></script>
+   <script type="text/javascript" src="../src/CubePrism.js"></script>
+
+   <script type="text/javascript" src="../src/asgn3.js"></script>
+   <script type="text/javascript" src="../src/drawAllShapes.js"></script>
+
+   <script type="text/javascript" src="../src/Camera.js"></script>
+</body>
+</html>
