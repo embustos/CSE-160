@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <title>ASGN4: Lighting</title>
+   <link rel="shortcut icon" href="">
+   <style>
+      body { font-family: sans-serif; margin: 8px; }
+      canvas { display: block; border: 1px solid #333; }
+      .ctrl-row { margin: 6px 0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+      button { padding: 5px 12px; cursor: pointer; }
+   </style>
+</head>
+<body onload="main()">
+
+   <canvas id="asg3" width="600" height="500">
+      Please use a browser that supports "canvas"
+   </canvas>
+
+   <div style="margin-top:8px;">
+
+      <!-- Camera help -->
+      <div class="ctrl-row">
+         <b>Camera:</b>
+         <span>WASD / Arrow keys = move &nbsp;|&nbsp; Q/E = turn &nbsp;|&nbsp; Mouse drag = look</span>
+      </div>
+
+      <!-- Light toggles -->
+      <div class="ctrl-row">
+         <button id="toggleLight">Point Light: ON</button>
+         <button id="toggleSpotLight">Spot Light: ON</button>
+         <button id="toggleNormalViz">Normal Viz: OFF</button>
+         <button id="toggleAnimLight">Animate Light: ON</button>
+      </div>
+
+      <!-- Point light position & color -->
+      <div class="ctrl-row">
+         <label><b>Light Angle (°):</b>
+            <input type="range" id="lightAngle" min="0" max="360" value="0" style="width:150px">
+         </label>
+         <label><b>Height:</b>
+            <input type="range" id="lightHeight" min="0" max="10" value="3" step="0.1" style="width:110px">
+         </label>
+      </div>
+
+   </div>
+
+   <p>Name: Emiliano Bustos</p>
+   <p>School Email: ebustos@ucsc.edu</p>
+   <p>Notes: Move around the world to see the different objects that are affected by the lighting.</p>
+
+   <!-- Libraries -->
+   <script src="../lib/webgl-utils.js"></script>
+   <script src="../lib/webgl-debug.js"></script>
+   <script src="../lib/cuon-utils.js"></script>
+   <script src="../lib/cuon-matrix-cse160.js"></script>
+
+   <!-- App source -->
+   <script type="text/javascript" src="../src/Triangle.js"></script>
+   <script type="text/javascript" src="../src/Cube.js"></script>
+   <script type="text/javascript" src="../src/Sphere.js"></script>
+   <script type="text/javascript" src="../src/Model.js"></script>
+   <script type="text/javascript" src="../src/CubePrism.js"></script>
+   <script type="text/javascript" src="../src/asgn4.js"></script>
+   <script type="text/javascript" src="../src/drawAllShapes.js"></script>
+   <script type="text/javascript" src="../src/Camera.js"></script>
+
+</body>
+</html>
